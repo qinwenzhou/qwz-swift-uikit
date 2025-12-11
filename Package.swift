@@ -5,22 +5,30 @@ import PackageDescription
 
 let package = Package(
     name: "qwz-swift-uikit",
+    platforms: [
+        .macOS("13.0"),
+        .macCatalyst("16.0"),
+        .iOS("16.0"),
+        .watchOS("9.0"),
+        .tvOS("16.0"),
+        .visionOS("1.0"),
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "qwz-swift-uikit",
-            targets: ["qwz-swift-uikit"]
+            name: "QwzUIKit",
+            targets: ["QwzUIKit"]
         ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "qwz-swift-uikit"
+            name: "QwzUIKit"
         ),
         .testTarget(
-            name: "qwz-swift-uikitTests",
-            dependencies: ["qwz-swift-uikit"]
+            name: "QwzUIKitTests",
+            dependencies: ["QwzUIKit"]
         ),
     ]
 )
